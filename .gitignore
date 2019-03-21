@@ -1,2 +1,4 @@
 *.code-workspace
-/.vscode
+.vscode
+node_modules
+target
