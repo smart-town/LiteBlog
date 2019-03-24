@@ -4,13 +4,20 @@ import App from "./App.vue";
 
 let indexcss = require("./common/css/index.css")
 console.log("=====index.js=====")
-console.log(indexcss);
-console.log(Vue);
+
 console.log(Vue.default);
+
+function rootElement(){
+    let ele = document.createElement("div") ;
+    ele.id = "root" ;
+    return ele;
+}
+document.body.appendChild(rootElement());
+
 let app = new Vue({
     el : "#root",
     data: {
-        message:"Hello,message"
+        message:"Hello,message!"
     },
     render: function(createElement){
         return createElement(App) ;

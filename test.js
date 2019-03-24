@@ -1,1 +1,0 @@
-console.log("modle-Global.__dirname:",__dirname)

@@ -1,12 +1,12 @@
 <template>
-    <div class="example">{{msg}}OkkJune</div>
+    <div class="example">{{msg}},Cherry??</div>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            msg: "Hello!"
+            msg: "Smalltown,,"
         }
     }
 }
