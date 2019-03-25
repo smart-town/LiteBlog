@@ -1,12 +1,12 @@
 <template>
-    <div class="example">{{msg}},Cherry??</div>
+    <div class="example">{{msg}}Cherry??</div>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            msg: "Smalltown,,"
+            msg: "Smalltown,"
         }
     }
 }
