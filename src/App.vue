@@ -1,5 +1,5 @@
 <template>
-    <div class="example">{{msg}}Cherry??</div>
+    <div class="example">{{msg}}Cherry</div>
 </template>
 
 <script>
@@ -15,5 +15,6 @@ export default {
 <style>
     .example {
         color : red;
+        border: 1px solid lightblue;
     }
 </style>
