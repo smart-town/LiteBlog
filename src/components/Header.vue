@@ -1,5 +1,8 @@
 <template>
+<div>
     <header class="my-header">{{msg}}</header>
+    <button v-on:click="log">show</button>
+</div>
 </template>
 
 <script>
@@ -7,6 +10,12 @@
         data(){
             return {
                 msg: 'data-msg-1',
+            }
+        },
+        methods:{
+            log: function(){
+                console.log("===log route:",this.$route);
+                this.$router.push("/app");
             }
         }
     }

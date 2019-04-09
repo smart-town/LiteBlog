@@ -16,5 +16,6 @@ export default {
     .example {
         color : red;
         border: 1px solid lightblue;
+        text-align: center;
     }
 </style>
