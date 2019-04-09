@@ -5,6 +5,9 @@ import Header from "./components/Header.vue" ;
 import TestEntry from "./components/test/TestEntry.vue" ;
 import DynamicUrl from "./components/test/DynamicUrl.vue" ;
 
+// import "./common/bootstrap/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.css';
+
 Vue.use(VueRouter) ;//模块化工程中使用需要明确安装路由功能
 
 //定义路由

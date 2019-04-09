@@ -1,7 +1,7 @@
 <template>
 <div>
     <header class="my-header">{{msg}}</header>
-    <button v-on:click="log">show</button>
+    <button v-on:click="log" class="btn-primary">show</button>
 </div>
 </template>
 
