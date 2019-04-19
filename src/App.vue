@@ -1,13 +1,19 @@
 <template>
-    <div class="example">{{msg}}Cherry</div>
+<div>
+    <div class="example">Index</div>
+    <input class="btn btn-primary" v-on:click="gotoTest" value="test" type="button"/>
+</div>
 </template>
 
 <script>
 export default {
     data(){
         return {
-            msg: "Smalltown,"
+            msg: "Index"
         }
+    },
+    methods: {
+        gotoTest: function(){this.$router.push("/test")}
     }
 }
 </script>

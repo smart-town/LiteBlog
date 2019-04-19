@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="text-center text-info">测试基础页面</div>
     <ul>
       <li>
         <span class="myButton" v-on:click="go(1)">/dynamicUrl/1</span>
@@ -8,7 +9,7 @@
         <span class="myButton" v-on:click="go(2)">/dynamicUrl/2</span>
       </li>
       <li>
-        <span class="myButton" v-on:click="go(3)">。。。</span>
+        <span class="myButton" v-on:click="go(3)">/embededRoutes/3</span>
       </li>
       <li>
         <span class="myButton" v-on:click="go(4)">。。。</span>
@@ -28,6 +29,7 @@ export default {
           this.$router.push("/dynamicUrl/2");
           break;
         default:
+          this.$router.push("/TestEmbededRoutes")
           console.log("default");
       }
     }
