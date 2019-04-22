@@ -12,7 +12,10 @@
         <span class="myButton" v-on:click="go(3)">/embededRoutes/3</span>
       </li>
       <li>
-        <span class="myButton" v-on:click="go(4)">。。。</span>
+        <span class="myButton" v-on:click="go(4)">/embedNameView/4</span>
+      </li>
+      <li>
+        <span class="myButton" v-on:click="go(5)">/BasicTest/5</span>
       </li>
     </ul>
   </div>
@@ -28,9 +31,18 @@ export default {
         case 2:
           this.$router.push("/dynamicUrl/2");
           break;
-        default:
-          this.$router.push("/TestEmbededRoutes")
-          console.log("default");
+        case 4:
+          this.$router.push("/EmbedNameView/2");
+          break;
+        case 3:
+          this.$router.push("/TestEmbededRoutes");
+          break;
+        case 5:
+          this.$router.push({
+            path: "/BasicTest",
+            query: { name: "smalltown" }
+          });
+          break;
       }
     }
   }

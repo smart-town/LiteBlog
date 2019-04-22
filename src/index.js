@@ -6,6 +6,7 @@ import TestEntry from "./components/test/TestEntry.vue" ;
 import DynamicUrl from "./components/test/DynamicUrl.vue" ;
 import TestEmbededRoutes from "./components/test/TestEmbededRoutes.vue";
 import EmbedNameView from "./components/test/EmbedNameView.vue";
+import BasicTest from "./components/test/BasicTest.vue";
 import 'bootstrap/dist/css/bootstrap.css';
 
 Vue.use(VueRouter) ;//模块化工程中使用需要明确安装路由功能
@@ -23,8 +24,26 @@ const routes = [
      ]},
      {
         path: '/EmbedNameView/:test', component: EmbedNameView,
-
-     }
+         children: [
+            {path: '', component: App},
+            {path: 'test', components:{
+               default: App,
+               a: Header,
+            }}
+         ]
+     },
+     {
+        path: '/BasicTest',
+        component: BasicTest,
+        name: 'BasicTest',
+        props: true,
+     },
+   //   {
+   //      path: '/BasicTestParam',
+   //      component: BasicTest,
+   //      props: true,
+   //      name: 'testDecouple',
+   //   }
 ] ;
 //注入路由器后，可以在任何组件内通过`this.$router`访问路由器。通过this.$route访问当前路由
 
@@ -43,5 +62,11 @@ document.body.appendChild(rootElement());
 const router = new VueRouter({routes: routes}) ;
 
 router.push({name:'app'});
+
+router.beforeEach((to,from,next)=>{
+   console.log("前置守卫...beforeEach") ;
+   console.log(`to:`,to)
+   next();
+})
 
 const app = new Vue({router}).$mount("#root") ;
