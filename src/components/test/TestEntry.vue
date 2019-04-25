@@ -17,6 +17,9 @@
       <li>
         <span class="myButton" v-on:click="go(5)">/BasicTest/5</span>
       </li>
+      <li>
+        <span class="myButton" v-on:click="go(6)">/TestPureJs</span>
+      </li>
     </ul>
   </div>
 </template>
@@ -42,6 +45,9 @@ export default {
             path: "/BasicTest",
             query: { name: "smalltown" }
           });
+          break;
+        case 6:
+          this.$router.push("/TestPureJs");
           break;
       }
     }

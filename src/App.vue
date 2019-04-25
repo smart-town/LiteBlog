@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="example">Index</div>
+    <div class="example">{{msg}}</div>
     <input class="btn btn-primary" v-on:click="gotoTest" value="test" type="button"/>
 </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
     data(){
         return {
-            msg: "Index"
+            msg: "INDEX"
         }
     },
     methods: {

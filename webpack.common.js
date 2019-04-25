@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanPlugin = require("clean-webpack-plugin") ;
 const VueLoaderPlugin = require("vue-loader/lib/plugin") ;
 
-const outputdir = 'dist';
+const outputdir = 'D:/03work/13VSCode/PluginTest/plugintest/src/dist';
 
 module.exports = {
     entry:{
@@ -13,7 +13,8 @@ module.exports = {
     },
     output:{
         filename: '[name]-[hash].js',
-        path: path.resolve(__dirname,outputdir),
+        // path: path.resolve(__dirname,outputdir),
+        path: path.resolve(outputdir),
     },
     optimization:{
         splitChunks:{

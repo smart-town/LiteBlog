@@ -9,7 +9,7 @@ module.exports = merge(common,{
         new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: { 
-        contentBase: "./dist",
+        contentBase: common.output.path,
         hot: true,
         disableHostCheck: true,
         // inline: true,
