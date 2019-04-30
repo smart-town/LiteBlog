@@ -18,7 +18,7 @@ export default {
             this.$router.push("/TestEmbededRoutes/embeded1");
         }
     }
-};
+}
 </script>
 <style>
 </style>

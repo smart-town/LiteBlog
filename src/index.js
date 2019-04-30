@@ -8,6 +8,7 @@ import TestEmbededRoutes from "./components/test/TestEmbededRoutes.vue";
 import EmbedNameView from "./components/test/EmbedNameView.vue";
 import BasicTest from "./components/test/BasicTest.vue";
 import TestPureJs from "./components/test/TestPureJs.vue";
+import Component1 from "./components/test/Component1.vue";
 import GlobalDefine from "./common/GlobalDefine.js";
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -18,6 +19,11 @@ Vue.use(VueRouter) ;//模块化工程中使用需要明确安装路由功能
 //定义路由
 const routes = [
     {path: '/app', name: 'app', component: App},
+    {
+       path: '/Component1',
+       name: 'Component1',
+       component: Component1
+    },
     {path: '/header', component: Header},
     {path: '/test', component: TestEntry},
     {path: '/dynamicUrl/:id', component: DynamicUrl},
@@ -63,7 +69,9 @@ document.body.appendChild(rootElement());
 
 const router = new VueRouter({routes: routes}) ;
 
-router.push({name:'app'});
+router.push({
+   name: 'app'
+});
 
 router.beforeEach((to,from,next)=>{
    console.log("前置守卫...beforeEach") ;
@@ -71,4 +79,5 @@ router.beforeEach((to,from,next)=>{
    next();
 })
 
+Vue.component("Component1",Component1);
 const app = new Vue({router}).$mount("#root") ;
